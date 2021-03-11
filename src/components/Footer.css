@@ -1,6 +1,9 @@
 .footer {
   text-align: center;
-  bottom: 0;
+  clear: both;
+  position: relative;
+  height: 200px;
+  margin-top: -200px;
 }
 
 .footer > p {

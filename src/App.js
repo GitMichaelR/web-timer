@@ -1,25 +1,42 @@
 import "./App.css";
 import Wetter from "./components/Wetter";
-import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Sidebar from "./components/Sidebar";
-import ToolBody from "./components/ToolBody";
+import Timer from "./components/Timer";
+import Wecker from "./components/Wecker";
+import Uhrzeit from "./components/Uhrzeit";
+import Stoppuhr from "./components/Stoppuhr";
+import Home from "./components/Home";
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 function App() {
   return (
     <div className="app">
-      <Sidebar className="sidebar" />
-      <div className="main">
-        <Header />
-        <ToolBody className="toolBody" />
-        <Footer />
-      </div>
-      {/* toolBody__Wetter */}
-      {/* toolBody__Timer */}
-      {/* toolBody__Interval-Timer */}
-      {/* toolBody__Wecker */}
-      {/* toolBody__Uhrzeit */}
-      {/* toolBody__Stoppuhr */}
+      <Router>
+        <Sidebar className="sidebar" />
+        <div className="main">
+          <Switch>
+            <Route path="/">
+              <Home />
+            </Route>
+            <Route path="Wetter">
+              <Wetter />
+            </Route>
+            <Route path="Timer-Pomodoro">
+              <Timer />
+            </Route>
+            <Route path="Wecker">
+              <Wecker />
+            </Route>
+            <Route path="Uhrzeit">
+              <Uhrzeit />
+            </Route>
+            <Route path="Stoppuhr">
+              <Stoppuhr />
+            </Route>
+          </Switch>
+        </div>
+      </Router>
     </div>
   );
 }

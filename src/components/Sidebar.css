@@ -6,28 +6,7 @@
   padding-top: 40px;
 }
 
-.logo {
-  padding-left: 10px;
-}
-
-.links {
-  padding-top: 15vh;
-}
-
-.links > div {
-  padding-left: 10px;
-  margin-bottom: 4vh;
-  color: #b5b5b5;
-  display: flex;
-  align-items: center;
-}
-
-.links > div > h2 {
-  padding-left: 10px;
-  font-size: 1.2em;
-}
-
-.border {
-  border-left: 4px solid red;
-  color: black !important;
+.active_link {
+  border-left: 4px solid red !important;
+  border-radius: 0px !important;
 }
