@@ -1,0 +1,8 @@
+.footer {
+  text-align: center;
+  bottom: 0;
+}
+
+.footer > p {
+  font-size: 14px;
+}

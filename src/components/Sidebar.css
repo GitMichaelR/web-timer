@@ -1,0 +1,33 @@
+.sidebar {
+  -webkit-box-shadow: 1px 0px 10px 0px #ccc; /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
+  -moz-box-shadow: 1px 0px 10px 0px #ccc; /* Firefox 3.5 - 3.6 */
+  box-shadow: 1px 0px 10px 0px #ccc;
+  background-color: white;
+  padding-top: 40px;
+}
+
+.logo {
+  padding-left: 10px;
+}
+
+.links {
+  padding-top: 15vh;
+}
+
+.links > div {
+  padding-left: 10px;
+  margin-bottom: 4vh;
+  color: #b5b5b5;
+  display: flex;
+  align-items: center;
+}
+
+.links > div > h2 {
+  padding-left: 10px;
+  font-size: 1.2em;
+}
+
+.border {
+  border-left: 4px solid red;
+  color: black !important;
+}

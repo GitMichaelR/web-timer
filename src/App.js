@@ -1,23 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import Wetter from "./components/Wetter";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
+import Sidebar from "./components/Sidebar";
+import ToolBody from "./components/ToolBody";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app">
+      <Sidebar className="sidebar" />
+      <div className="main">
+        <Header />
+        <ToolBody className="toolBody" />
+        <Footer />
+      </div>
+      {/* toolBody__Wetter */}
+      {/* toolBody__Timer */}
+      {/* toolBody__Interval-Timer */}
+      {/* toolBody__Wecker */}
+      {/* toolBody__Uhrzeit */}
+      {/* toolBody__Stoppuhr */}
     </div>
   );
 }
