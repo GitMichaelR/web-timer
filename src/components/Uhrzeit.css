@@ -1,0 +1,6 @@
+.uhrzeit {
+  height: 100vh;
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+}

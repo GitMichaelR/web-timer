@@ -1,5 +1,4 @@
 import "./Sidebar.css";
-import WbSunnyIcon from "@material-ui/icons/WbSunny";
 import AccessTimeIcon from "@material-ui/icons/AccessTime";
 import TimerIcon from "@material-ui/icons/Timer";
 import AlarmIcon from "@material-ui/icons/Alarm";
@@ -21,7 +20,6 @@ function Sidebar() {
     timer: path.pathname.slice(1) === "Timer" ? true : false,
     wecker: path.pathname.slice(1) === "Wecker" ? true : false,
     stoppuhr: path.pathname.slice(1) === "Stoppuhr" ? true : false,
-    wetter: path.pathname.slice(1) === "Wetter" ? true : false,
     uhrzeit: path.pathname.slice(1) === "Uhrzeit" ? true : false,
   });
 
@@ -39,7 +37,7 @@ function Sidebar() {
 
   return (
     <div className="sidebar">
-      <MenuList>
+      <MenuList className="menu">
         <MenuItem
           className={active.timer ? "active_link" : null}
           component={Link}
@@ -74,17 +72,6 @@ function Sidebar() {
           <ListItemText primary="Stoppuhr" />
         </MenuItem>
         <MenuItem
-          className={active.wetter ? "active_link" : null}
-          component={Link}
-          to={"/Wetter"}
-          onClick={() => changeActive("wetter")}
-        >
-          <ListItemIcon>
-            <WbSunnyIcon />
-          </ListItemIcon>
-          <ListItemText primary="Wetter" />
-        </MenuItem>
-        <MenuItem
           className={active.uhrzeit ? "active_link" : null}
           component={Link}
           to={"/Uhrzeit"}
@@ -97,24 +84,30 @@ function Sidebar() {
         </MenuItem>
       </MenuList>
 
-      <MenuList>
-        <MenuItem>
-          <ListItemIcon>
-            <SettingsIcon />
-          </ListItemIcon>
-          <ListItemText primary="Settings" />
-        </MenuItem>
-        <MenuItem onClick={() => setDarkMode(!darkMode)}>
-          <ListItemIcon>
-            {darkMode ? <Brightness4Icon /> : <Brightness7Icon />}
-          </ListItemIcon>
-          {darkMode ? (
-            <ListItemText primary="Licht an" />
-          ) : (
-            <ListItemText primary="Licht aus" />
-          )}
-        </MenuItem>
-      </MenuList>
+      <div>
+        <MenuList className="menu">
+          <MenuItem>
+            <ListItemIcon>
+              <SettingsIcon />
+            </ListItemIcon>
+            <ListItemText primary="Settings" />
+          </MenuItem>
+          <MenuItem onClick={() => setDarkMode(!darkMode)}>
+            <ListItemIcon>
+              {darkMode ? <Brightness4Icon /> : <Brightness7Icon />}
+            </ListItemIcon>
+            {darkMode ? (
+              <ListItemText primary="Licht an" />
+            ) : (
+              <ListItemText primary="Licht aus" />
+            )}
+          </MenuItem>
+        </MenuList>
+
+        <footer>
+          <p>© 2020 WebTimer</p>
+        </footer>
+      </div>
     </div>
   );
 }

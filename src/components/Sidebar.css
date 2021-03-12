@@ -1,12 +1,28 @@
 .sidebar {
-  -webkit-box-shadow: 1px 0px 10px 0px #ccc; /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
-  -moz-box-shadow: 1px 0px 10px 0px #ccc; /* Firefox 3.5 - 3.6 */
-  box-shadow: 1px 0px 10px 0px #ccc;
+  -webkit-box-shadow: 1px 0px 8px 5px #ccc; /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
+  -moz-box-shadow: 1px 0px 8px 5px #ccc; /* Firefox 3.5 - 3.6 */
+  box-shadow: 1px 0px 8px 5px #ccc;
   background-color: white;
-  padding-top: 40px;
+  min-width: 160px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 12px 0 20px;
 }
 
 .active_link {
   border-left: 4px solid red !important;
   border-radius: 0px !important;
+}
+
+footer {
+  text-align: center;
+  font-size: 14px;
+  padding-top: 30px;
+}
+
+.menu,
+.menu:hover,
+.menu:focus {
+  outline: none;
 }

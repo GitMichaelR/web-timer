@@ -1,0 +1,13 @@
+.time {
+  font-family: "Open Sans", "Segoe UI", sans-serif;
+  color: black;
+}
+.main {
+  font-size: 20vh;
+  font-weight: 300;
+}
+
+.date {
+  font-size: 6vh;
+  text-align: center;
+}
